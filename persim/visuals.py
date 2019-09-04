@@ -385,6 +385,8 @@ class Barcode():
         ===========
             list of png exports or []
         '''
+        import io
+        
         fsize = kwargs.get('figsize', (6, 4))
         show = kwargs.get('show', True)
         export = kwargs.get('export_png', False)
@@ -432,7 +434,7 @@ class Barcode():
             linewidth=0.5)
 
         title = "H%d barcode: %d finite, %d infinite" % (dim, number_of_bars_fin, number_of_bars_inf)
-        ax[idx].set_title(title, fontsize=10)
+        ax[idx].set_title(title, fontsize=9)
         ax[idx].set_yticks([])
 
         ax[idx].spines['right'].set_visible(False)
